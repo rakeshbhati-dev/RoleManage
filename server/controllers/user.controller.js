@@ -54,7 +54,7 @@ const login=async (req,res)=>{
 const getParticularUser=async (req,res)=>{
     try {
         const {id}=req.params
-        const user=await User.findByPk(id)
+        const user=await User.findByPk(id,{include:[Role]})
         if(!user){
             return res.status(404).json({error:"No user found"})
         }
@@ -67,7 +67,7 @@ const getParticularUser=async (req,res)=>{
 
 const getAllUser=async (req,res)=>{
     try {
-        const userList=await User.findAll()
+        const userList=await User.findAll({include:[Role, Enterprise]})
         if(userList.length==0){
             return res.status(200).json({message:"No user found"})
         }

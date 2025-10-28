@@ -5,7 +5,7 @@ const canAccess=require('../middleware/checkPermission')
 
 router.post('/',authenticate,canAccess('Role','create'),createRole)
 router.get('/',authenticate,canAccess('Role','read'),getAllRole)
-router.get('/:id',authenticate,canAccess('Role','read'),getParticularRole)
+router.get('/:id',authenticate,getParticularRole)
 router.put('/:id',authenticate,canAccess('Role','update'),updateRole)
 router.delete('/:id',authenticate,canAccess('Role','delete'),deleteRole)
 

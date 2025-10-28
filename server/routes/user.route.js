@@ -8,6 +8,6 @@ router.post('/',authenticate,canAccess('User','create'), createUser)
 router.post('/login', login)
 router.get('/',authenticate,canAccess('User','read'), getAllUser)
 router.get('/:id',authenticate, getParticularUser)
-router.put('/:id',authenticate,canAccess('User','edit'), updateUser)
+router.put('/:id',authenticate,canAccess('User','update'), updateUser)
 router.delete('/:id',authenticate,canAccess('User','delete'), deleteUser)
 module.exports=router

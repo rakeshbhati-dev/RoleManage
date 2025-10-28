@@ -44,7 +44,7 @@ function Login() {
             try {
                 const response=await login(formData)
                 setToken(response.token)
-                navigate('/dashboard')
+                navigate('/')
                 
                 localStorage.setItem('token',response.token)
             } catch (error) {

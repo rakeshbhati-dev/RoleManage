@@ -10,6 +10,7 @@ function Navbar() {
         setRoleId(null)
         setToken(null)
         navigate('/login')
+        localStorage.removeItem('token')
     }
   return (
     <>

@@ -4,6 +4,6 @@ const authenticate=require('../middleware/authentication')
 const canAccess=require('../middleware/checkPermission')
 
 router.post('/',authenticate,canAccess('Permission','create'),setPermission)
-router.get('/:id',getPermissionByRole)
+router.get('/:id',authenticate,getPermissionByRole)
 
 module.exports=router

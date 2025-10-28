@@ -19,12 +19,12 @@ const createProduct=async (req,res) => {
 const getProduct=async (req,res)=>{
     try {
         const {id}=req.params
-        const product=await Product.findByPk(id)
+        const product=await Product.findByPk(id,{include:[Enterprise]})
         if(!product){
             return res.status(404).json({error:"No Product Found"})
         }
         return res.status(200).json({product:product})
-    } catch (error) {
+    } catch (err) {
         console.log(err);
         return res.status(500).json({error:"Something went wrong"})
     }
@@ -32,12 +32,12 @@ const getProduct=async (req,res)=>{
 
 const getAllProduct=async (req,res) => {
     try {
-        const productList=await Product.findAll()
+        const productList=await Product.findAll({include:[Enterprise]})
         if(productList.length==0){
             return res.status(200).json({message:"No Product Found"})
         }
         return res.status(200).json({productList:productList})
-    } catch (error) {
+    } catch (err) {
          console.log(err);
         return res.status(500).json({error:"Something went wrong"})
     }
