@@ -1,4 +1,4 @@
-# NextAstra Assignment – MERN Stack Application
+# ROLE BASED ACCESS SYSTEM – MERN Stack Application
 
 ## Project Overview
 This project was developed as part of the **NextAstra Technologies – Jr. Full Stack Developer** assignment.  
@@ -18,12 +18,10 @@ The backend is fully implemented, and the frontend currently includes login func
 - Protected routes using middleware  
 - Password hashing with bcrypt  
 - RESTful API endpoints for authentication  
-- Error handling and validation  
-
-## Work in Progress
-- Frontend: login functionality implemented; dashboard and CRUD features are pending  
-- Future updates can include full CRUD operations, improved UI/UX, and role-based access  
-
+- Error handling and validation
+- Create roles and assign module-level permissions (Read, Create, Update, Delete).
+- Role-specific dashboard showing only authorized modules. 
+ 
 ## How to Run
 
 ### 1. Clone the Repository
