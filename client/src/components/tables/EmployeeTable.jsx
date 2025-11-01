@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { deleteEmployee, getAllEmployee } from '../../services/employee'
 import { useNavigate } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPen, faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function EmployeeTable({token,canEdit=false,canDelete=false}) {
     const [employeeList,setEmployeeList]=useState([])
@@ -66,8 +68,8 @@ function EmployeeTable({token,canEdit=false,canDelete=false}) {
                             <td>{employee.Enterprise.name}</td>
                             <td>{employee.status}</td>
                             <td>
-                                {canEdit && <button className='edit' onClick={()=>updateHandler(employee.id)}>Edit</button>}
-                                {canDelete && <button className='delete' onClick={()=>deleteHandler(employee.id)}>Delete</button>}
+                                {canEdit &&<FontAwesomeIcon  icon={faPen} onClick={()=>updateHandler(employee.id)}/>}
+                                {canDelete && <FontAwesomeIcon className='ml-3'  icon={faTrash} onClick={()=>deleteHandler(employee.id)} />}
                             </td>
                         </tr>
                     )
