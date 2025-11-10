@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
    <AuthProvider>
     <PermissionProvider>
       <BrowserRouter>
-      <App />
+      <App></App>
       </BrowserRouter>
     </PermissionProvider>
    </AuthProvider>
