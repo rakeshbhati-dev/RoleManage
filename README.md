@@ -1,10 +1,9 @@
 # ROLE BASED ACCESS SYSTEM – MERN Stack Application
 
 ## Project Overview
-This project was developed as part of the **NextAstra Technologies – Jr. Full Stack Developer** assignment.  
-It demonstrates a basic authentication flow and secure backend API using the **MERN (MySQL, Express, React, Node)** stack.  
+This web application is designed to provide a secure and scalable user management system with fine-grained role-based access control (RBAC). It allows administrators to define roles, assign permissions, and manage access across multiple business modules such as Products, Enterprises, Users, and Employees.
 
-The backend is fully implemented, and the frontend currently includes login functionality. Further frontend features can be extended in the future.
+The system ensures that users only interact with the modules and features they are authorized to use, maintaining both security and modular flexibility across the platform.
 
 ## Tech Stack
 - **Frontend:** React, Axios, React Router  
